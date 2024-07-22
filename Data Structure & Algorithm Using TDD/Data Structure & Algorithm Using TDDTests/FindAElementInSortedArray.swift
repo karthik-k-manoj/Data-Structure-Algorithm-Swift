@@ -12,7 +12,7 @@ func findElement(_ element: Int, in array: [Int]) -> Bool {
 }
 
 final class FindAElementInSortedArray: XCTestCase {
-    func test_findElement_onEmptyInput_deliversFalse() {
+    func test_findElement_onEmptyList_deliversFalse() {
         let output = findElement(1, in: [])
         XCTAssertFalse(output)
     }
