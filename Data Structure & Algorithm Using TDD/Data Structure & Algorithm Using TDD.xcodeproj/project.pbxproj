@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA6F66AB2C4E09FA0048FACF /* Data_Structure___Algorithm_Using_TDD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6F66A22C4E09FA0048FACF /* Data_Structure___Algorithm_Using_TDD.framework */; };
+		DA6F66BB2C4E0B690048FACF /* FindAElementInSortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F66BA2C4E0B690048FACF /* FindAElementInSortedArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		DA6F66A22C4E09FA0048FACF /* Data_Structure___Algorithm_Using_TDD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Data_Structure___Algorithm_Using_TDD.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6F66AA2C4E09FA0048FACF /* Data Structure & Algorithm Using TDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Data Structure & Algorithm Using TDDTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA6F66BA2C4E0B690048FACF /* FindAElementInSortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAElementInSortedArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		DA6F66AE2C4E09FA0048FACF /* Data Structure & Algorithm Using TDDTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA6F66BA2C4E0B690048FACF /* FindAElementInSortedArray.swift */,
 			);
 			path = "Data Structure & Algorithm Using TDDTests";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 					};
 					DA6F66A92C4E09FA0048FACF = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -191,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA6F66BB2C4E0B690048FACF /* FindAElementInSortedArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +396,7 @@
 		DA6F66B82C4E09FA0048FACF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -400,6 +406,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.essentialDeveloper.Data-Structure---Algorithm-Using-TDDTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -407,6 +414,7 @@
 		DA6F66B92C4E09FA0048FACF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
