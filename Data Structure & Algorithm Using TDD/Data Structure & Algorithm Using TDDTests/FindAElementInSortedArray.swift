@@ -29,7 +29,7 @@ final class FindAElementInSortedArray: XCTestCase {
     }
     
     func test_findElement_inNonEmptySortedList_deliversFalse_whenElementIsAbsent() {
-        let output = findElement(1, in: [2])
+        let output = findElement(1, in: [2,8,10,45,90])
         XCTAssertFalse(output)
     }
 }
