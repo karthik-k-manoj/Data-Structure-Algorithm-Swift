@@ -23,12 +23,12 @@ final class FindAElementInSortedArray: XCTestCase {
         XCTAssertFalse(output)
     }
     
-    func test_findElement_inNonEmptyList_deliversTrue_whenElementIsPresent() {
+    func test_findElement_inNonEmptySortedList_deliversTrue_whenElementIsPresent() {
         let output = findElement(1, in: [1])
         XCTAssertTrue(output)
     }
     
-    func test_findElement_inNonEmptyList_deliversFalse_whenElementIsAbsent() {
+    func test_findElement_inNonEmptySortedList_deliversFalse_whenElementIsAbsent() {
         let output = findElement(1, in: [2])
         XCTAssertFalse(output)
     }
