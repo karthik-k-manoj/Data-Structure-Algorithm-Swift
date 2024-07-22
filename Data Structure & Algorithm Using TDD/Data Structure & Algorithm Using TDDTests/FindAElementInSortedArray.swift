@@ -8,9 +8,18 @@
 import XCTest
 
 func findElement(_ element: Int, in array: [Int]) -> Bool {
-    for item in array {
-        if element == item {
+    var range = 0..<array.endIndex
+     
+    while range.startIndex < range.endIndex {
+        let midPoint = range.startIndex + (range.endIndex - range.startIndex) / 2
+        let middleElement = array[midPoint]
+        
+        if middleElement == element {
             return true
+        } else if element < middleElement {
+            range = range.startIndex..<midPoint
+        } else {
+            range = (midPoint+1)..<range.endIndex
         }
     }
     
@@ -32,4 +41,11 @@ final class FindAElementInSortedArray: XCTestCase {
         let output = findElement(1, in: [2,8,10,45,90])
         XCTAssertFalse(output)
     }
+    
+    func test_findElement_inNonEmptySortedList_deliversFalse_whenElementIsPresent_atSecondLastPosition() {
+        let output = findElement(45, in: [2,8,10,45,90])
+        XCTAssertTrue(output)
+    }
 }
+
+
