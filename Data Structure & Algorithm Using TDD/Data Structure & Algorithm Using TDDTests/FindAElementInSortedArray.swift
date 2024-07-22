@@ -7,7 +7,7 @@
 
 import XCTest
 
-// Time complexity here is O(n). This is called divde and Conquer approach
+// Time complexity here is O(logn). This is called divde and Conquer approach
 func findElement(_ element: Int, in array: [Int]) -> Bool {
     var range = 0..<array.endIndex
      
@@ -48,5 +48,3 @@ final class FindAElementInSortedArray: XCTestCase {
         XCTAssertTrue(output)
     }
 }
-
-
