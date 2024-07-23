@@ -52,4 +52,8 @@ final class GroupConsecutiveElements: XCTestCase {
     func test_groupElements_deliversSingleGroup_onTwoIdenticalElementsList() {
         XCTAssertEqual(groupElements([1,1]), [[1,1]])
     }
+    
+    func test_groupElements_deliversMultipleGroups_onMultipleIdenticalElementsList() {
+        XCTAssertEqual(groupElements([1,1,2,2,3,4,5,5]), [[1,1], [2,2], [3], [4], [5,5]])
+    }
 }
