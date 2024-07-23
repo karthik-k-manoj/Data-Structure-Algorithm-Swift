@@ -35,19 +35,19 @@ extension Array where Element: Equatable {
 }
 
 final class GroupConsecutiveElements: XCTestCase {
-    func test_groupElements_deliversSingleGroup_onSingleElementList() {
+    func test_deliversSingleGroup_onSingleElement() {
         XCTAssertEqual([1].groupConsecutiveElements(), [[1]])
     }
     
-    func test_groupElements_deliversTwoGroups_onTwoElementsList() {
+    func test_deliversTwoGroups_onTwoElements() {
         XCTAssertEqual([1,2].groupConsecutiveElements(), [[1], [2]])
     }
     
-    func test_groupElements_deliversSingleGroup_onTwoIdenticalElementsList() {
+    func test_deliversSingleGroup_onTwoIdenticalElements() {
         XCTAssertEqual([1,1].groupConsecutiveElements(), [[1,1]])
     }
     
-    func test_groupElements_deliversMultipleGroups_onMultipleIdenticalElementsList() {
+    func test_deliversMultipleGroups_onMultipleIdenticalElements() {
         XCTAssertEqual([1,1,2,2,3,4,5,5].groupConsecutiveElements(), [[1,1], [2,2], [3], [4], [5,5]])
     }
 }
