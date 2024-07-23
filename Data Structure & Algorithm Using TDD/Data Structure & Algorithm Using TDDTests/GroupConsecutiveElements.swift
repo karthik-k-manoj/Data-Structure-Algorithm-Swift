@@ -8,7 +8,7 @@
 import XCTest
 
 extension Array where Element: Equatable {
-    func groupElements() -> [[Element]] {
+    func groupConsecutiveElements() -> [[Element]] {
         // First group made of first element
         var currentGroup = [Element]()
         currentGroup.append(self[0])
@@ -37,18 +37,18 @@ extension Array where Element: Equatable {
 final class GroupConsecutiveElements: XCTestCase {
     func test_groupElements_deliversSingleGroup_onSingleElementList() {
         print("Int \(Int())")
-        XCTAssertEqual([1].groupElements(), [[1]])
+        XCTAssertEqual([1].groupConsecutiveElements(), [[1]])
     }
     
     func test_groupElements_deliversTwoGroups_onTwoElementsList() {
-        XCTAssertEqual([1,2].groupElements(), [[1], [2]])
+        XCTAssertEqual([1,2].groupConsecutiveElements(), [[1], [2]])
     }
     
     func test_groupElements_deliversSingleGroup_onTwoIdenticalElementsList() {
-        XCTAssertEqual([1,1].groupElements(), [[1,1]])
+        XCTAssertEqual([1,1].groupConsecutiveElements(), [[1,1]])
     }
     
     func test_groupElements_deliversMultipleGroups_onMultipleIdenticalElementsList() {
-        XCTAssertEqual([1,1,2,2,3,4,5,5].groupElements(), [[1,1], [2,2], [3], [4], [5,5]])
+        XCTAssertEqual([1,1,2,2,3,4,5,5].groupConsecutiveElements(), [[1,1], [2,2], [3], [4], [5,5]])
     }
 }
