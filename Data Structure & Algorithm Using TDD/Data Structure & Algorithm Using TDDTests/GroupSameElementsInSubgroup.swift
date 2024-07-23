@@ -8,6 +8,7 @@
 import XCTest
 
 func groupElements(_ elements: [Int]) -> [[Int]] {
+    // If elements is empty then you return
     guard !elements.isEmpty else { return [] }
     
     var currentGroup = [Int]()
@@ -24,6 +25,7 @@ func groupElements(_ elements: [Int]) -> [[Int]] {
         }
     }
 
+    // If the element contains only one or for the last group of the last element
     groups.append(currentGroup)
     
     return groups
