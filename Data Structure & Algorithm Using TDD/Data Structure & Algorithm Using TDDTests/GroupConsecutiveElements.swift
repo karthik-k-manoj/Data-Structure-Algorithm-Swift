@@ -36,7 +36,6 @@ extension Array where Element: Equatable {
 
 final class GroupConsecutiveElements: XCTestCase {
     func test_groupElements_deliversSingleGroup_onSingleElementList() {
-        print("Int \(Int())")
         XCTAssertEqual([1].groupConsecutiveElements(), [[1]])
     }
     
