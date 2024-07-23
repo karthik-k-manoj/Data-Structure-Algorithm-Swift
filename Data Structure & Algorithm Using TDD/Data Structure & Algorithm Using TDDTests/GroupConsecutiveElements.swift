@@ -1,5 +1,5 @@
 //
-//  GroupSameElementsInSubgroup.swift
+//  GroupConsecutiveElements.swift
 //  Data Structure & Algorithm Using TDDTests
 //
 //  Created by Karthik K Manoj on 23/07/24.
@@ -32,7 +32,7 @@ func groupElements(_ elements: [Int]) -> [[Int]] {
 }
 
 
-final class GroupSameElementsInSubgroup: XCTestCase {
+final class GroupConsecutiveElements: XCTestCase {
     func test_groupElements_deliversEmptyGroup_onEmptyList() {
         XCTAssertEqual(groupElements([]), [])
     }
