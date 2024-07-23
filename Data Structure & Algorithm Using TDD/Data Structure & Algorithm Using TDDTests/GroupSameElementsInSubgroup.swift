@@ -31,21 +31,15 @@ func groupElements(_ elements: [Int]) -> [[Int]] {
 
 
 final class GroupSameElementsInSubgroup: XCTestCase {
-    func test_groupElements_deliversEmptyList_onEmptyInputList() {
-        let output = groupElements([])
-        
-        XCTAssertEqual(output, [])
+    func test_groupElements_deliversEmptyGroup_onEmptyList() {
+        XCTAssertEqual(groupElements([]), [])
     }
     
-    func test_groupElements_deliversSingleGroupList_onSingleInputList() {
-        let output = groupElements([1])
-        
-        XCTAssertEqual(output, [[1]])
+    func test_groupElements_deliversSingleGroup_onSingleElementList() {
+        XCTAssertEqual(groupElements([1]), [[1]])
     }
     
-    func test_groupELements_deliversTwoGroups_onTwoElementsInputList() {
-        let output = groupElements([1,2])
-        
-        XCTAssertEqual(output, [[1], [2]])
+    func test_groupElements_deliversTwoGroups_onTwoElementsList() {
+        XCTAssertEqual(groupElements([1,2]), [[1], [2]])
     }
 }
