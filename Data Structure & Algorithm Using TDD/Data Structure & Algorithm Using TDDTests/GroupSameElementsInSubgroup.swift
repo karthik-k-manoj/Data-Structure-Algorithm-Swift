@@ -8,7 +8,9 @@
 import XCTest
 
 func groupElements(_ elements: [Int]) -> [[Int]] {
-    []
+    guard !elements.isEmpty else { return [] }
+    
+    return [[elements[0]]]
 }
 
 
@@ -17,5 +19,11 @@ final class GroupSameElementsInSubgroup: XCTestCase {
         let output = groupElements([])
         
         XCTAssertEqual(output, [])
+    }
+    
+    func test_groupElements_deliversSingleGroupList_onSingleInputList() {
+        let output = groupElements([1])
+        
+        XCTAssertEqual(output, [[1]])
     }
 }
