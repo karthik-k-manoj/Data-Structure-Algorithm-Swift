@@ -8,12 +8,24 @@
 import XCTest
 
 func sortWithO1Space(_ array: [Int]) -> [Int] {
-    []
+    guard !array.isEmpty else { return [] }
+
+    return array
 }
 
 final class SortArrayWithO1SpaceComplexity: XCTestCase {
     func test_sort_deliversEmptyArray_onEmptyArray() {
         let output = sortWithO1Space([])
         XCTAssertEqual(output, [])
+    }
+    
+    func test_sort_deliversSingleElementArray_onSingleElementArray() {
+        let output = sortWithO1Space([1])
+        XCTAssertEqual(output, [1])
+    }
+    
+    func test_sort_deliversSorted2ElementsArray_onTwoElementsSortedArray() {
+        let output = sortWithO1Space([1, 2])
+        XCTAssertEqual(output, [1, 2])
     }
 }
