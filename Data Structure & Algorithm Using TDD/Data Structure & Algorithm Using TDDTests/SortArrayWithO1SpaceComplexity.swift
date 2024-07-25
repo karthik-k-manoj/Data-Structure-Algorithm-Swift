@@ -10,7 +10,7 @@ import XCTest
 func sortWithO1Space(_ array: [Int]) -> [Int] {
     guard !array.isEmpty else { return [] }
 
-    return array
+    return array.sorted()
 }
 
 final class SortArrayWithO1SpaceComplexity: XCTestCase {
@@ -26,6 +26,11 @@ final class SortArrayWithO1SpaceComplexity: XCTestCase {
     
     func test_sort_deliversSorted2ElementsArray_onTwoElementsSortedArray() {
         let output = sortWithO1Space([1, 2])
+        XCTAssertEqual(output, [1, 2])
+    }
+    
+    func test_sort_deliversSorted2ElementsArray_onTwoElementsUnsortedArray() {
+        let output = sortWithO1Space([2, 1])
         XCTAssertEqual(output, [1, 2])
     }
 }
