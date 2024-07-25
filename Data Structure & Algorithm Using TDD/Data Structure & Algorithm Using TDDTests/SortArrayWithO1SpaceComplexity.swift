@@ -29,6 +29,9 @@ final class SortArrayWithO1SpaceComplexity: XCTestCase {
         XCTAssertEqual(output, [1, 2])
     }
     
+    // refactor implementation backed up by test is a powerful feature which reduces the risk and fear of change.
+    // we already have passing test. Now you are free to change the implementation while tests giving us the confidence
+    // system is working as expected
     func test_sort_deliversSorted2ElementsArray_onTwoElementsUnsortedArray() {
         let output = sortWithO1Space([2, 1])
         XCTAssertEqual(output, [1, 2])
