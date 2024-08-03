@@ -16,7 +16,7 @@ extension Array where Element: Equatable {
         // Main group hold subgroups
         var groups = [[Element]]()
         
-        for element in dropFirst() {
+        for element in self[1...] {
             if currentGroup[currentGroup.startIndex] == element {
                 currentGroup.append(element)
             } else {

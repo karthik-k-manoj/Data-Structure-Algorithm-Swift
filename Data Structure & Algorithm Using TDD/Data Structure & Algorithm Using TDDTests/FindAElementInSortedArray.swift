@@ -9,7 +9,7 @@ import XCTest
 
 // Time complexity here is O(logn). This is called divde and Conquer approach
 func findElement(_ element: Int, in array: [Int]) -> Bool {
-    var range = 0..<array.endIndex
+    var range = 0..<array.count
      
     while range.startIndex < range.endIndex {
         let midPoint = range.startIndex + (range.endIndex - range.startIndex) / 2
