@@ -21,5 +21,9 @@ final class StackDataStructureUsingArray: XCTestCase {
         XCTAssertTrue(stack.isEmpty)
     }
     
+    func test_stackWithOneElement_deliversNonEmpty() {
+        let stack = Stack(elements: [1])
+        XCTAssertTrue(!stack.isEmpty)
+    }
 }
 
