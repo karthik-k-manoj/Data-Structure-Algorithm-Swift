@@ -16,7 +16,7 @@ struct Stack {
 }
 
 final class StackDataStructureUsingArray: XCTestCase {
-    func test_stack_isEmpty() {
+    func test_stackWithEmptyList_isEmpty() {
         let stack = Stack(elements: [])
         XCTAssertTrue(stack.isEmpty)
     }
