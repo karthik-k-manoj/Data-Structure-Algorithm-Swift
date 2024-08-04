@@ -5,7 +5,7 @@
 //  Created by Karthik K Manoj on 04/08/24.
 //
 
-import Foundation
+import XCTest
 
 final class StackDataStructureUsingArray: XCTestCase {
     
